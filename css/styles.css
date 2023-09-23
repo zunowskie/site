@@ -16,17 +16,17 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     z-index: -1;
-	transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(1.1);
     filter: blur(15px);
 }
 
 .background-video video {
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -34,7 +34,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     position: relative;
     flex-direction: column;
@@ -42,8 +42,9 @@ body {
 }
 
 .rectangle {
-    width: 320px;
-    height: 400px;
+    width: 90%; /* Изменено для адаптации */
+    max-width: 320px; /* Максимальная ширина */
+    height: auto; /* Автоматическая высота */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,14 +56,15 @@ body {
     position: relative;
     border-radius: 20px;
     z-index: 1;
-	margin: 10px;
+    margin: 10px;
 }
 
 .avatar {
-	width: 220px;
-	height: 220px;
-	border-radius: 1000px;
-	margin: 0;
+    width: 100%; /* Изменено для адаптации */
+    max-width: 220px; /* Максимальная ширина */
+    height: auto; /* Автоматическая высота */
+    border-radius: 1000px;
+    margin: 0;
 }
 
 .social-links-rectangle {
